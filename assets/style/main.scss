@@ -36,19 +36,44 @@ html {
                 width: 900px;
                 height: 500px;
                 display: flex;
-                border: 3px solid #ff6347;
 
 
                 .primaryColor {
                     flex: 1;
                     border: 3px solid #ee82ee;
 
-
                     h1 {
                         font-weight: 700;
                         font-size: 4.8rem;
                         text-align: center;
                         font-family: 'Gaegu', cursive;
+                        position: relative;
+                        color: white;
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                        line-height: 1.2em;
+                    }
+
+                    h1::before {
+                        text-align: center;
+                        content: attr(data-text);
+                        position: absolute;
+                        top: 0;
+                        left: 93px;
+                        max-width: 80%;
+                        color: #2D6EF3;
+                        overflow: hidden;
+                        animation: animate 5s linear infinite;
+                    }
+
+                    @keyframes animate {
+                        0% {
+                            width: 0;
+                        }
+
+                        100% {
+                            width: 58%;
+                        }
                     }
                 }
 
@@ -77,14 +102,10 @@ html {
                             text-align: center;
                             font-family: 'Gaegu', cursive;
                             border-top: 1px solid #191A23;
-
                         }
                     }
-
                 }
             }
-
-
         }
 
         .mainColor::before {
@@ -103,7 +124,7 @@ html {
     }
 }
 
-/* 
+
 @media(max-width: 1080px) {
     html {
         font-size: 93.75%;
@@ -111,7 +132,29 @@ html {
         body {
             font-size: 1rem; // Tamanho da fonte 15px
 
+            .mainColor {
+                .containerColor {
 
+                    .primaryColor {
+                        h1 {
+                            font-size: 2.8rem;
+                        }
+
+                        h1::before {
+                            display: none;
+                        }
+
+                    }
+
+                    .secondaryColor {
+                        .secondaryTwo {
+                            .author {
+                                font-size: 1.6rem;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -123,7 +166,43 @@ html {
         body {
             font-size: 1rem; // Tamanho da fonte 14px
 
+            .mainColor {
+                .containerColor {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
 
+                    .primaryColor {
+                        flex: 2;
+
+                        h1 {
+                            font-size: 2.8rem;
+                        }
+
+                        h1::before {
+                            display: none;
+                        }
+                    }
+
+                    .secondaryColor {
+                        justify-content: space-around;
+
+                        .secondaryOne {
+                            height: 0;
+
+
+
+                        }
+
+                        .secondaryTwo {
+                            .author {
+                                font-size: 1.6rem;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-} */
+}

@@ -44,7 +44,6 @@ html body .mainColor .containerColor {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 3px solid #ff6347;
 }
 
 html body .mainColor .containerColor .primaryColor {
@@ -59,6 +58,42 @@ html body .mainColor .containerColor .primaryColor h1 {
   font-size: 4.8rem;
   text-align: center;
   font-family: 'Gaegu', cursive;
+  position: relative;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2em;
+}
+
+html body .mainColor .containerColor .primaryColor h1::before {
+  text-align: center;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 93px;
+  max-width: 80%;
+  color: #2D6EF3;
+  overflow: hidden;
+  -webkit-animation: animate 5s linear infinite;
+          animation: animate 5s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 58%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 58%;
+  }
 }
 
 html body .mainColor .containerColor .secondaryColor {
@@ -115,28 +150,64 @@ html body .mainColor::before {
           transform: rotate(225deg);
 }
 
-/* 
-@media(max-width: 1080px) {
-    html {
-        font-size: 93.75%;
-
-        body {
-            font-size: 1rem; // Tamanho da fonte 15px
-
-
-        }
-    }
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+  html body {
+    font-size: 1rem;
+  }
+  html body .mainColor .containerColor .primaryColor h1 {
+    font-size: 2.8rem;
+  }
+  html body .mainColor .containerColor .primaryColor h1::before {
+    display: none;
+  }
+  html body .mainColor .containerColor .secondaryColor .secondaryTwo .author {
+    font-size: 1.6rem;
+  }
 }
 
-@media(max-width: 720px) {
-    html {
-        font-size: 87.5%;
-
-        body {
-            font-size: 1rem; // Tamanho da fonte 14px
-
-
-        }
-    }
-} */
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+  html body {
+    font-size: 1rem;
+  }
+  html body .mainColor .containerColor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body .mainColor .containerColor .primaryColor {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+  html body .mainColor .containerColor .primaryColor h1 {
+    font-size: 2.8rem;
+  }
+  html body .mainColor .containerColor .primaryColor h1::before {
+    display: none;
+  }
+  html body .mainColor .containerColor .secondaryColor {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  html body .mainColor .containerColor .secondaryColor .secondaryOne {
+    height: 0;
+  }
+  html body .mainColor .containerColor .secondaryColor .secondaryTwo .author {
+    font-size: 1.6rem;
+    padding: 0;
+  }
+}
 /*# sourceMappingURL=main.css.map */
