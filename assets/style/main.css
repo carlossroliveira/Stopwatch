@@ -1,0 +1,142 @@
+/* $bg-color: #424242;
+$hl-color: #3EE8E5;
+$white: white;
+$muted-color: mix(white, $bg-color, 70%);
+$trans-time: 300ms;
+$width: 320px;
+$height: 54px;
+$transition: 0.3s ease-out all; */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html body {
+  font-size: 1.6rem;
+}
+
+html body .mainColor {
+  height: 100vh;
+  color: #ffffff;
+  position: relative;
+  background-color: #191a23;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body .mainColor .containerColor {
+  z-index: 1;
+  width: 900px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 3px solid #ff6347;
+}
+
+html body .mainColor .containerColor .primaryColor {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 3px solid #ee82ee;
+}
+
+html body .mainColor .containerColor .primaryColor h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  text-align: center;
+  font-family: 'Gaegu', cursive;
+}
+
+html body .mainColor .containerColor .secondaryColor {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #2D6EF3;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body .mainColor .containerColor .secondaryColor .secondaryOne {
+  height: 39rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body .mainColor .containerColor .secondaryColor .secondaryTwo .author {
+  padding: 3rem;
+  font-size: 3rem;
+  font-weight: 300;
+  text-align: center;
+  font-family: 'Gaegu', cursive;
+  border-top: 1px solid #191A23;
+}
+
+html body .mainColor::before {
+  content: '';
+  position: fixed;
+  top: 369px;
+  left: -194px;
+  height: 0;
+  width: 0;
+  border-left: 300px solid transparent;
+  border-right: 300px solid transparent;
+  border-bottom: 300px solid #2D6EF3;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+/* 
+@media(max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+
+        body {
+            font-size: 1rem; // Tamanho da fonte 15px
+
+
+        }
+    }
+}
+
+@media(max-width: 720px) {
+    html {
+        font-size: 87.5%;
+
+        body {
+            font-size: 1rem; // Tamanho da fonte 14px
+
+
+        }
+    }
+} */
+/*# sourceMappingURL=main.css.map */
