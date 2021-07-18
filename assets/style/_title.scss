@@ -1,0 +1,47 @@
+html {
+  font-size: 62.5%;
+
+  body {
+    font-size: 1.6rem; // Tamanho da fonte 16px
+
+    .mainColor {
+      .containerColor {
+        .primaryColor {
+          h1 {
+            font-weight: 700;
+            font-size: 4.8rem;
+            text-align: center;
+            font-family: 'Gaegu', cursive;
+            position: relative;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1.2em;
+          }
+
+          h1::before {
+            text-align: center;
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 94px;
+            max-width: 80%;
+            color: #2D6EF3;
+            overflow: hidden;
+            animation: animate 5s linear infinite;
+          }
+
+          @keyframes animate {
+            0% {
+              width: 0;
+            }
+
+            100% {
+              width: 58%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

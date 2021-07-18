@@ -1,0 +1,71 @@
+html {
+  font-size: 62.5%;
+
+  body {
+    font-size: 1.6rem; // Tamanho da fonte 16px
+
+    .mainColor {
+      .containerColor {
+        .secondaryColor {
+          .one {
+            display: flex;
+            justify-content: center;
+            padding: 10rem;
+
+            button {
+              width: 200px;
+            }
+          }
+
+          .two {
+            display: flex;
+            justify-content: space-evenly;
+          }
+
+          .secondaryOne {
+            .btn {
+              border: none;
+              width: 160px;
+              display: block;
+              font-size: 150%;
+              cursor: pointer;
+              color: #191A23;
+              font-weight: 700;
+              padding: 10px 20px;
+              border-radius: 8px;
+              transition: all 500ms linear;
+              font-family: 'Gaegu', cursive;
+              box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+              &::after {
+                top: 0;
+                left: 0;
+                width: 0;
+                content: "";
+                height: 100%;
+                transition: none;
+                position: absolute;
+                background-color: #ffffff66;
+              }
+
+              &:hover {
+                color: #fff;
+                border: none;
+                text-decoration: none;
+                box-shadow: 0 0 10px 0 #191A23;
+                background-color: rgba(#191A23, 0.8);
+                filter: drop-shadow(15px 7px 1px rgba(0, 0, 0, .5));
+
+                &::after {
+                  width: 100%;
+                  background-color: #ffffff00;
+                  transition: all 300ms ease-out;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

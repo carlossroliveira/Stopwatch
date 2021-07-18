@@ -1,0 +1,27 @@
+html {
+  font-size: 62.5%;
+
+  body {
+    font-size: 1.6rem; // Tamanho da fonte 16px
+
+    .mainColor {
+      .containerColor {
+        .secondaryColor {
+          .secondaryTwo {
+            .author {
+              display: flex;
+              padding: 3rem;
+              font-size: 2rem;
+              font-weight: 300;
+              text-align: center;
+              letter-spacing: -1px;
+              font-family: 'Gaegu', cursive;
+              border-top: 1px solid #191A23;
+              box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
