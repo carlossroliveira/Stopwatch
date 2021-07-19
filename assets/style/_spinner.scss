@@ -1,4 +1,5 @@
 @import '_vaviablesAndMixin';
+
 html {
   font-size: 62.5%;
 
@@ -14,6 +15,7 @@ html {
             height: 250px;
             margin: 85px auto;
 
+
             .blocks {
               position: absolute;
               width: 8px;
@@ -26,6 +28,7 @@ html {
               animation: animateSpinner 1.9s ease-in-out infinite;
               animation-delay: calc(0.05s * var(--i));
             }
+
 
             @keyframes animateSpinner {
 
@@ -47,32 +50,41 @@ html {
               }
             }
 
+
+
+
             .blockMain {
+              color: $base-bgc;
               position: absolute;
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%);
               font-size: 2em;
               letter-spacing: 2px;
-              animation: animateText 2s ease-in-out infinite;
-              animation-delay: -1s;
             }
 
-            @keyframes animateText {
+            /* ===== TypeScript ============================== */
+            .activeColor {
+              color: $color-and-background;
+              text-shadow:
+                0 0 5px $color-and-background,
+                0 0 15px $color-and-background;
+            }
 
-              0%,
-              50% {
-                color: $base-bgc;
-                text-shadow: none;
-              }
+            .stopColor {
+              color: rgb(255, 99, 71);
+              text-shadow:
+                0 0 5px rgb(255, 99, 71),
+                0 0 15px rgb(255, 99, 71);
+            }
 
-              50.1%,
-              100% {
-                color: $color-and-background;
-                text-shadow:
-                  0 0 5px $color-and-background,
-                  0 0 15px $color-and-background;
-              }
+            .resetColor {
+              color: $base-bgc;
+              text-shadow: none;
+            }
+
+            .breack {
+              animation-play-state: paused;
             }
           }
         }

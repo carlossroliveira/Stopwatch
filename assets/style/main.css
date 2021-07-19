@@ -313,6 +313,7 @@ html body .mainColor .containerColor .primaryColor .loading {
   width: 250px;
   height: 250px;
   margin: 85px auto;
+  /* ===== TypeScript ============================== */
 }
 
 html body .mainColor .containerColor .primaryColor .loading .blocks {
@@ -363,6 +364,7 @@ html body .mainColor .containerColor .primaryColor .loading .blocks {
 }
 
 html body .mainColor .containerColor .primaryColor .loading .blockMain {
+  color: #050c09;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -370,36 +372,26 @@ html body .mainColor .containerColor .primaryColor .loading .blockMain {
           transform: translate(-50%, -50%);
   font-size: 2em;
   letter-spacing: 2px;
-  -webkit-animation: animateText 2s ease-in-out infinite;
-          animation: animateText 2s ease-in-out infinite;
-  -webkit-animation-delay: -1s;
-          animation-delay: -1s;
 }
 
-@-webkit-keyframes animateText {
-  0%,
-  50% {
-    color: #050c09;
-    text-shadow: none;
-  }
-  50.1%,
-  100% {
-    color: #2D6EF3;
-    text-shadow: 0 0 5px #2D6EF3, 0 0 15px #2D6EF3;
-  }
+html body .mainColor .containerColor .primaryColor .loading .activeColor {
+  color: #2D6EF3;
+  text-shadow: 0 0 5px #2D6EF3, 0 0 15px #2D6EF3;
 }
 
-@keyframes animateText {
-  0%,
-  50% {
-    color: #050c09;
-    text-shadow: none;
-  }
-  50.1%,
-  100% {
-    color: #2D6EF3;
-    text-shadow: 0 0 5px #2D6EF3, 0 0 15px #2D6EF3;
-  }
+html body .mainColor .containerColor .primaryColor .loading .stopColor {
+  color: tomato;
+  text-shadow: 0 0 5px tomato, 0 0 15px tomato;
+}
+
+html body .mainColor .containerColor .primaryColor .loading .resetColor {
+  color: #050c09;
+  text-shadow: none;
+}
+
+html body .mainColor .containerColor .primaryColor .loading .breack {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 /* ===== Variables ============================== */
