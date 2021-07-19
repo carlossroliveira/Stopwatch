@@ -1,12 +1,6 @@
-// ============================== Variables
-/* $bg-color: #424242;
-$hl-color: #3EE8E5;
-$white: white;
-$muted-color: mix(white, $bg-color, 70%);
-$trans-time: 300ms;
-$width: 320px;
-$height: 54px;
-$transition: 0.3s ease-out all; */
+@import '_vaviablesAndMixin';
+
+/* ===== Imports initial ============================== */
 @import '_svg';
 @import '_gitHubCorners';
 @import '_spinner';
@@ -14,7 +8,7 @@ $transition: 0.3s ease-out all; */
 @import '_button';
 @import '_title';
 
-// ============================== Configuration initial
+/* ===== Configuration initial ============================== */
 * {
     margin: 0;
     padding: 0;
@@ -28,8 +22,9 @@ html {
         font-size: 1.6rem; // Tamanho da fonte 16px
 
         .mainColor {
-            max-width: 1440px;
+            @include fontF;
             margin: auto 0;
+            max-width: 1440px;
 
             .anime {
                 position: fixed;
@@ -40,9 +35,9 @@ html {
             }
 
             height: 100vh;
-            color: #ffffff;
+            color: $base-color;
             position: relative;
-            background-color: #191a23;
+            background-color: $color-background-main;
 
             display: flex;
             align-items: center;
@@ -63,7 +58,7 @@ html {
                     #00000017 0px 8px 4px,
                     #00000017 0px 16px 8px,
                     #00000017 0px 32px 16px,
-                    #2D6EF3 0px 20px 30px -10px;
+                    $color-and-background 0px 20px 30px -10px;
 
                 .primaryColor {
                     flex: 1;
@@ -74,23 +69,23 @@ html {
                     flex: 1;
                     display: flex;
                     flex-direction: column;
-                    background-color: #2D6EF3;
                     justify-content: space-between;
+                    background-color: $color-and-background;
                 }
             }
         }
 
         .mainColor::before {
-            content: '';
-            position: fixed;
-            top: 369px;
-            left: -194px;
-            height: 0;
             width: 0;
+            height: 0;
+            top: 369px;
+            content: '';
+            left: -194px;
+            position: fixed;
+            transform: rotate(225deg);
             border-left: 300px solid transparent;
             border-right: 300px solid transparent;
-            border-bottom: 300px solid #2D6EF3;
-            transform: rotate(225deg);
+            border-bottom: 300px solid $color-and-background;
         }
 
     }
@@ -150,14 +145,15 @@ html {
                 }
 
                 .containerColor {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
                     height: 100vh;
+                    
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
 
                     .primaryColor {
-                        background-color: transparent;
                         flex: 1;
+                        background-color: transparent;
 
                         h1 {
                             font-size: 2.8rem;
@@ -169,15 +165,15 @@ html {
                     }
 
                     .secondaryColor {
-                        background-color: transparent;
                         justify-content: initial;
+                        background-color: transparent;
 
                         .secondaryOne {
                             height: 0;
 
                             .btn+.btn {
-                                margin: 0 10px;
                                 padding: 0;
+                                margin: 0 10px;
                             }
 
                             .one {

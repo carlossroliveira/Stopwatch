@@ -1,3 +1,4 @@
+@import '_vaviablesAndMixin';
 html {
   font-size: 62.5%;
 
@@ -11,9 +12,9 @@ html {
             font-weight: 700;
             font-size: 4.8rem;
             text-align: center;
-            font-family: 'Gaegu', cursive;
+            @include fontF;
             position: relative;
-            color: white;
+            color: $base-color;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             line-height: 1.2em;
@@ -26,7 +27,7 @@ html {
             top: 0;
             left: 94px;
             max-width: 80%;
-            color: #2D6EF3;
+            color: $color-and-background;
             overflow: hidden;
             animation: animate 5s linear infinite;
           }

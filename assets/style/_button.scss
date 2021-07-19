@@ -1,3 +1,4 @@
+@import '_vaviablesAndMixin';
 html {
   font-size: 62.5%;
 
@@ -29,12 +30,12 @@ html {
               display: block;
               font-size: 150%;
               cursor: pointer;
-              color: #191A23;
+              color: $color-background-main;
               font-weight: 700;
               padding: 10px 20px;
               border-radius: 8px;
               transition: all 500ms linear;
-              font-family: 'Gaegu', cursive;
+              @include fontF;
               box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
               &::after {
@@ -49,11 +50,11 @@ html {
               }
 
               &:hover {
-                color: #fff;
                 border: none;
+                color: $base-color;
                 text-decoration: none;
-                box-shadow: 0 0 10px 0 #191A23;
-                background-color: rgba(#191A23, 0.8);
+                box-shadow: 0 0 10px 0 $color-background-main;
+                background-color: rgba($color-background-main, 0.8);
                 filter: drop-shadow(15px 7px 1px rgba(0, 0, 0, .5));
 
                 &::after {

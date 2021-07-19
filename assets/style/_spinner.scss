@@ -1,3 +1,4 @@
+@import '_vaviablesAndMixin';
 html {
   font-size: 62.5%;
 
@@ -17,7 +18,7 @@ html {
               position: absolute;
               width: 8px;
               height: 25px;
-              background-color: #050c09;
+              background-color: $base-bgc;
               left: 50%;
               border-radius: 8px;
               transform: rotate(calc(18deg * var(--i)));
@@ -30,19 +31,19 @@ html {
 
               0%,
               50% {
-                background-color: #050c09;
+                background-color: $base-bgc;
                 box-shadow: none;
               }
 
               50.1%,
               100% {
-                background-color: #2D6EF3;
+                background-color: $color-and-background;
                 box-shadow:
-                  0 0 5px #2D6EF3,
-                  0 0 15px #2D6EF3,
-                  0 0 30px #2D6EF3,
-                  0 0 60px #2D6EF3,
-                  0 0 90px #2D6EF3;
+                  0 0 5px $color-and-background,
+                  0 0 15px $color-and-background,
+                  0 0 30px $color-and-background,
+                  0 0 60px $color-and-background,
+                  0 0 90px $color-and-background;
               }
             }
 
@@ -61,16 +62,16 @@ html {
 
               0%,
               50% {
-                color: #050c09;
+                color: $base-bgc;
                 text-shadow: none;
               }
 
               50.1%,
               100% {
-                color: #2D6EF3;
+                color: $color-and-background;
                 text-shadow:
-                  0 0 5px #2D6EF3,
-                  0 0 15px #2D6EF3;
+                  0 0 5px $color-and-background,
+                  0 0 15px $color-and-background;
               }
             }
           }
