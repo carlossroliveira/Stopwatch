@@ -1,5 +1,7 @@
 @import '_vaviablesAndMixin';
 
+
+
 html {
   font-size: 62.5%;
 
@@ -15,7 +17,6 @@ html {
             height: 250px;
             margin: 85px auto;
 
-
             .blocks {
               position: absolute;
               width: 8px;
@@ -25,10 +26,7 @@ html {
               border-radius: 8px;
               transform: rotate(calc(18deg * var(--i)));
               transform-origin: 0 125px;
-              animation: animateSpinner 1.9s ease-in-out infinite;
-              animation-delay: calc(0.05s * var(--i));
             }
-
 
             @keyframes animateSpinner {
 
@@ -50,9 +48,6 @@ html {
               }
             }
 
-
-
-
             .blockMain {
               color: $base-bgc;
               position: absolute;
@@ -64,27 +59,49 @@ html {
             }
 
             /* ===== TypeScript ============================== */
-            .activeColor {
+
+            .startColorStopWatch {
               color: $color-and-background;
               text-shadow:
                 0 0 5px $color-and-background,
                 0 0 15px $color-and-background;
             }
 
-            .stopColor {
+            .stopColorStopWatch {
               color: rgb(255, 99, 71);
               text-shadow:
                 0 0 5px rgb(255, 99, 71),
                 0 0 15px rgb(255, 99, 71);
             }
 
-            .resetColor {
+            .resetColorStopWatch {
               color: $base-bgc;
               text-shadow: none;
             }
 
-            .breack {
+            .startColorAnimation {
+              animation: animateSpinner 1.9s ease-in-out infinite;
+              animation-delay: calc(0.05s * var(--i));
+              animation-play-state: running;
+            }
+
+            .stopColorAnimation {
+              animation: animateSpinner 1.9s ease-in-out infinite;
+              animation-delay: calc(0.05s * var(--i));
               animation-play-state: paused;
+
+
+              /* background-color: rgb(255, 99, 71) !important;
+              box-shadow:
+                0 0 5px rgb(255, 99, 71) ,
+                0 0 15px rgb(255, 99, 71),
+                0 0 30px rgb(255, 99, 71),
+                0 0 60px rgb(255, 99, 71),
+                0 0 90px rgb(255, 99, 71) !important; */
+            }
+
+            .resetColorAnimation {
+              animation: animateSpinner unset;
             }
           }
         }

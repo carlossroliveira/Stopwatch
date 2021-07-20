@@ -327,10 +327,6 @@ html body .mainColor .containerColor .primaryColor .loading .blocks {
           transform: rotate(calc(18deg * var(--i)));
   -webkit-transform-origin: 0 125px;
           transform-origin: 0 125px;
-  -webkit-animation: animateSpinner 1.9s ease-in-out infinite;
-          animation: animateSpinner 1.9s ease-in-out infinite;
-  -webkit-animation-delay: calc(0.05s * var(--i));
-          animation-delay: calc(0.05s * var(--i));
 }
 
 @-webkit-keyframes animateSpinner {
@@ -374,24 +370,49 @@ html body .mainColor .containerColor .primaryColor .loading .blockMain {
   letter-spacing: 2px;
 }
 
-html body .mainColor .containerColor .primaryColor .loading .activeColor {
+html body .mainColor .containerColor .primaryColor .loading .startColorStopWatch {
   color: #2D6EF3;
   text-shadow: 0 0 5px #2D6EF3, 0 0 15px #2D6EF3;
 }
 
-html body .mainColor .containerColor .primaryColor .loading .stopColor {
+html body .mainColor .containerColor .primaryColor .loading .stopColorStopWatch {
   color: tomato;
   text-shadow: 0 0 5px tomato, 0 0 15px tomato;
 }
 
-html body .mainColor .containerColor .primaryColor .loading .resetColor {
+html body .mainColor .containerColor .primaryColor .loading .resetColorStopWatch {
   color: #050c09;
   text-shadow: none;
 }
 
-html body .mainColor .containerColor .primaryColor .loading .breack {
+html body .mainColor .containerColor .primaryColor .loading .startColorAnimation {
+  -webkit-animation: animateSpinner 1.9s ease-in-out infinite;
+          animation: animateSpinner 1.9s ease-in-out infinite;
+  -webkit-animation-delay: calc(0.05s * var(--i));
+          animation-delay: calc(0.05s * var(--i));
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+html body .mainColor .containerColor .primaryColor .loading .stopColorAnimation {
+  -webkit-animation: animateSpinner 1.9s ease-in-out infinite;
+          animation: animateSpinner 1.9s ease-in-out infinite;
+  -webkit-animation-delay: calc(0.05s * var(--i));
+          animation-delay: calc(0.05s * var(--i));
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
+  /* background-color: rgb(255, 99, 71) !important;
+              box-shadow:
+                0 0 5px rgb(255, 99, 71) ,
+                0 0 15px rgb(255, 99, 71),
+                0 0 30px rgb(255, 99, 71),
+                0 0 60px rgb(255, 99, 71),
+                0 0 90px rgb(255, 99, 71) !important; */
+}
+
+html body .mainColor .containerColor .primaryColor .loading .resetColorAnimation {
+  -webkit-animation: animateSpinner unset;
+          animation: animateSpinner unset;
 }
 
 /* ===== Variables ============================== */

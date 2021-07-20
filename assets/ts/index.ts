@@ -3,25 +3,34 @@ const elementReset = document.querySelector('[data-reset]') as HTMLButtonElement
 const elementStop = document.querySelector('[data-stop]') as HTMLButtonElement;
 
 const elementValue = document.querySelector('[data-value]') as HTMLDivElement;
-
-const teste = document.querySelectorAll('.blocks') as unknown;
+const blocks = document.querySelectorAll('.blocks');
 
 const handleColor = (
-  activeColor: string,
-  removeColorOne: string,
-  removeColorTwo: string,
+  activeColorStopWatch: string,
+  removeColorOneStopWatch: string,
+  removeColorTwoStopWatch: string,
 ): void => {
-  elementValue.classList.add(activeColor);
-  elementValue.classList.remove(removeColorOne);
-  elementValue.classList.remove(removeColorTwo);
+  elementValue.classList.add(activeColorStopWatch);
+  elementValue.classList.remove(removeColorOneStopWatch);
+  elementValue.classList.remove(removeColorTwoStopWatch);
 };
 
-function myPauseFunction(): void {
-  teste.forEach((element: any) => {
-    element.classList.add('breack');
+const forAnimation = (
+  activeColorAnimation: string,
+  removeColorOneAnimation: string,
+  removeColorTwoAnimation: string,
+): void => {
+  blocks.forEach((elements) => {
+    elements.classList.add(activeColorAnimation);
+    elements.classList.remove(removeColorOneAnimation);
+    elements.classList.remove(removeColorTwoAnimation);
   });
-}
+};
 
-elementStart.addEventListener('click', () => handleColor('activeColor', 'stopColor', 'resetColor'));
-elementReset.addEventListener('click', () => handleColor('resetColor', 'activeColor', 'stopColor'));
-elementStop.addEventListener('click', myPauseFunction);
+elementStart.addEventListener('click', () => handleColor('startColorStopWatch', 'stopColorStopWatch', 'resetColorStopWatch'));
+elementStop.addEventListener('click', () => handleColor('stopColorStopWatch', 'startColorStopWatch', 'resetColorStopWatch'));
+elementReset.addEventListener('click', () => handleColor('resetColorStopWatch', 'startColorStopWatch', 'stopColorStopWatch'));
+
+elementStart.addEventListener('click', () => forAnimation('startColorAnimation', 'stopColorAnimation', 'resetColorAnimation'));
+elementStop.addEventListener('click', () => forAnimation('stopColorAnimation', 'startColorAnimation', 'resetColorAnimation'));
+elementReset.addEventListener('click', () => forAnimation('resetColorAnimation', 'startColorAnimation', 'stopColorAnimation'));
