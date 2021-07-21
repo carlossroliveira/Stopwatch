@@ -17,6 +17,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;700&display=swap" rel="stylesheet">
   <!-- Icone -->
   <script src="https://kit.fontawesome.com/ebc6f6cdfd.js" crossorigin="anonymous"></script>
+
+
+
 </head>
 
 <body>
@@ -465,24 +468,26 @@
         <div class="secondaryColor">
           <div class="secondaryOne">
             <div class="one">
-
-              <button type="button" class="btn" data-role="clock-reset" data-start>
+              <section class="warning">
+                <div data-alert class="alert hide ">
+                  <span class="fas fa-exclamation-circle"></span>
+                  <div data-close class="close-btn">
+                    <span class="fas fa-times"></span>
+                  </div>
+                </div>
+              </section>
+              <button type="button" class="btn" data-btn data-role="clock-reset" data-start>
                 Start
               </button>
             </div>
-
             <div class="two">
-
               <button type="button" class="btn" data-role="clock-start-stop" data-reset>
                 Reset
               </button>
-
               <button type="button" class="btn" data-role="clock-start-stop" data-stop>
                 Stop
               </button>
-
             </div>
-
           </div>
           <div class="secondaryTwo">
             <p class="author">
@@ -493,7 +498,6 @@
       </div>
     </section>
   </main>
-
 
   <a href="https://github.com/carlossroliveira" class="github-corner" aria-label="View source on GitHub"><svg width="80"
       height="80" viewBox="0 0 250 250"
@@ -510,5 +514,6 @@
 
   <!-- JavaScript Start -->
   <script src="assets/dist/index.js"></script>
+
 </body>
 </html>

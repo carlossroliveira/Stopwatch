@@ -1,0 +1,137 @@
+html {
+  font-size: 62.5%;
+
+  body {
+    font-size: 1.6rem; // Tamanho da fonte 16px
+    overflow: hidden;
+
+    .mainColor {
+      .containerColor {
+        .secondaryColor {
+          .secondaryOne {
+            .one {
+              .warning {
+
+                .alert {
+                  background: #ffdb9b;
+                  padding: 20px 40px;
+                  min-width: 420px;
+                  position: absolute;
+                  right: 0;
+                  top: 10px;
+                  border-radius: 4px;
+                  border-left: 8px solid rgb(255, 99, 71);
+                  overflow: hidden;
+                  opacity: 0;
+                  pointer-events: none;
+                }
+
+                .showAlertOne {
+                  opacity: 1;
+                  pointer-events: auto;
+                }
+
+                .showAlertOne::before {
+                  content: 'Warning: Inicie o cronometro!';
+                  padding: 0 20px;
+                  font-size: 18px;
+                  font-weight: 700;
+                  color: #191A23;
+                }
+
+                .showAlertTwo {
+                  opacity: 1;
+                  pointer-events: auto;
+                }
+
+                .showAlertTwo::before {
+                  content: 'Warning: Resete indisponivel!';
+                  padding: 0 20px;
+                  font-size: 18px;
+                  font-weight: 700;
+                  color: #191A23;
+                }
+
+                .show {
+                  animation: show_slide 1s ease forwards;
+                }
+
+                .hide {
+                  animation: hide_slide 1s ease forwards;
+                }
+
+                @keyframes show_slide {
+                  0% {
+                    transform: translateX(100%);
+                  }
+
+                  40% {
+                    transform: translateX(-10%);
+                  }
+
+                  80% {
+                    transform: translateX(0%);
+                  }
+
+                  100% {
+                    transform: translateX(-10px);
+                  }
+                }
+
+                @keyframes hide_slide {
+                  0% {
+                    transform: translateX(-10px);
+                  }
+
+                  40% {
+                    transform: translateX(0%);
+                  }
+
+                  80% {
+                    transform: translateX(-10%);
+                  }
+
+                  100% {
+                    transform: translateX(100%);
+                  }
+                }
+
+                .fa-exclamation-circle {
+                  position: absolute;
+                  left: 20px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  color: rgb(255, 99, 71);
+                  font-size: 30px;
+                }
+
+                .close-btn {
+                  position: absolute;
+                  right: 0px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  background-color: rgb(255, 99, 71);
+                  text-shadow:
+                    0 0 5px rgb(255, 99, 71),
+                    0 0 15px rgb(255, 99, 71);
+                  padding: 20px 18px;
+                  cursor: pointer;
+
+                  &:hover {
+                    background: rgb(255, 129, 107);
+                  }
+
+                  .fas {
+                    color: #191A23;
+                    font-size: 22px;
+                    line-height: 40px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
