@@ -10,6 +10,7 @@
   "author": "Carlos Olivira",
   "license": "MIT",
   "dependencies": {
+    "easytimer.js": "^4.4.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "prettier": "^2.3.2",

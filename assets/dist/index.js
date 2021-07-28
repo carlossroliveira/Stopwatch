@@ -52,7 +52,8 @@ elementStop.addEventListener('click', () => {
     }
 });
 elementReset.addEventListener('click', () => {
-    if ((blockMain === null || blockMain === void 0 ? void 0 : blockMain.classList.contains('startColorStopWatch')) || (blockMain === null || blockMain === void 0 ? void 0 : blockMain.classList.contains('stopColorStopWatch'))) {
+    if ((blockMain === null || blockMain === void 0 ? void 0 : blockMain.classList.contains('startColorStopWatch'))
+        || (blockMain === null || blockMain === void 0 ? void 0 : blockMain.classList.contains('stopColorStopWatch'))) {
         handleColor('resetColorStopWatch', 'startColorStopWatch', 'stopColorStopWatch');
     }
     else {

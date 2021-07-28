@@ -78,7 +78,10 @@ elementStop.addEventListener('click', () => {
 });
 
 elementReset.addEventListener('click', () => {
-  if (blockMain?.classList.contains('startColorStopWatch') || blockMain?.classList.contains('stopColorStopWatch')) {
+  if (
+    blockMain?.classList.contains('startColorStopWatch')
+    || blockMain?.classList.contains('stopColorStopWatch')
+  ) {
     handleColor('resetColorStopWatch', 'startColorStopWatch', 'stopColorStopWatch');
   } else {
     Modal.handleWarning('show', 'showAlertTwo', 'hide');
@@ -92,3 +95,5 @@ elementReset.addEventListener('click', () => {
 elementStart.addEventListener('click', () => forAnimation('startColorAnimation', 'stopColorAnimation', 'resetColorAnimation'));
 elementStop.addEventListener('click', () => forAnimation('stopColorAnimation', 'startColorAnimation', 'resetColorAnimation'));
 elementReset.addEventListener('click', () => forAnimation('resetColorAnimation', 'startColorAnimation', 'stopColorAnimation'));
+
+/* ===== Start StopWatch ============================== */
