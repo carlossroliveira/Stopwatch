@@ -2,9 +2,9 @@
 /node_modules
 .cache
 dist/
-package-lock.json
 /.pnp
 .pnp.js
+package-lock.json
 # Sass
 .sass-cache/
 *.css.map
