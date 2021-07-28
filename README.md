@@ -1,13 +1,29 @@
-<h1 align="center"> 🏴󠁧󠁢󠁥󠁮󠁧󠁿 CEP - Project </h1>
+<h1 align="center"> 🏴󠁧󠁢󠁥󠁮󠁧󠁿 Stopwatch - Project </h1>
 
 ---
-![gif](https://user-images.githubusercontent.com/63623377/124982918-ae654080-e00d-11eb-8921-3a2e8899c18a.gif)
+![StopWatch](https://user-images.githubusercontent.com/63623377/127362019-485ac910-db14-49d4-a528-7a352c62cdef.gif)
 
 ---
 
-## CEP / API
+## Stopwatch 
 
-Cosumindo dados da API ViaCEP para consulta informações de endereços fornecendo apenas o CEP
+This stopwatch counts the seconds minutes and hours.
+A library called EasyTimer.js was used to count the time.
+
+
+```bash
+# Access the project folder and download dependencies
+$ yarn install
+or
+$ npm install
+```
+
+```bash
+# Run
+$ yarn dev
+or
+$ npm run dev
+```
 
 ## ♟️ Techs
 
@@ -15,9 +31,8 @@ Cosumindo dados da API ViaCEP para consulta informações de endereços fornecen
 ![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/-GitHub-212121?style=flat-square&logo=GitHub&logoColor=white)
 ![Html5](https://img.shields.io/badge/-Html5-DD4B25?style=flat-square&logo=Html5&logoColor=white)
-![Css3](https://img.shields.io/badge/-Css3-146EB0?style=flat-square&logo=Css3&logoColor=white)
 ![Sass](https://img.shields.io/badge/-Sass-C76494?style=flat-square&logo=Sass&logoColor=white)
-![Javascript](https://img.shields.io/badge/-Javascript-EFD81D?style=flat-square&logo=Javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/-TypeScript-2F74C0?style=flat-square&logo=TypeScript&logoColor=white)
 
 
 
