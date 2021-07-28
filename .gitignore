@@ -2,6 +2,7 @@
 /node_modules
 .cache
 dist/
+.package-lock.json
 /.pnp
 .pnp.js
 # Sass
