@@ -15,5 +15,6 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "eslint": "import/no-unresolved"
     }
 }
