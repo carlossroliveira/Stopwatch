@@ -25,10 +25,9 @@ html {
         .mainColor {
             @include fontF;
             margin: auto 0;
-            max-width: 1440px;
 
             .anime {
-                position: fixed;
+                position: relative;
                 z-index: 2;
                 top: 40rem;
                 left: 115rem;
@@ -147,7 +146,7 @@ html {
 
                 .containerColor {
                     height: 100vh;
-                    
+
                     display: flex;
                     align-items: center;
                     flex-direction: column;
@@ -198,4 +197,3 @@ html {
         }
     }
 }
-
