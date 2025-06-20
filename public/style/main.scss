@@ -1,13 +1,13 @@
-@import '_vaviablesAndMixin';
+@use './_footer';
+@use '_button';
+@use '_spinner';
+@use '_svg';
+@use '_gitHubCorners';
+@use '_title';
+@use '_warinig';
 
 /* ===== Imports initial ============================== */
-@import '_svg';
-@import '_gitHubCorners';
-@import '_spinner';
-@import '_footer';
-@import '_button';
-@import '_title';
-@import '_warinig';
+
 
 /* ===== Configuration initial ============================== */
 * {
@@ -23,7 +23,7 @@ html {
         font-size: 1.6rem; // Tamanho da fonte 16px
 
         .mainColor {
-            @include fontF;
+            font-family: 'Gaegu', cursive;
             margin: auto 0;
 
             .anime {
@@ -35,9 +35,9 @@ html {
             }
 
             height: 100vh;
-            color: $base-color;
+            color: #ffffff;
             position: relative;
-            background-color: $color-background-main;
+            background-color: #191A23;
 
             display: flex;
             align-items: center;
@@ -58,7 +58,7 @@ html {
                     #00000017 0px 8px 4px,
                     #00000017 0px 16px 8px,
                     #00000017 0px 32px 16px,
-                    $color-and-background 0px 20px 30px -10px;
+                    #2D6EF3 0px 20px 30px -10px;
 
                 .primaryColor {
                     flex: 1;
@@ -70,7 +70,7 @@ html {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                    background-color: $color-and-background;
+                    background-color: #2D6EF3;
                 }
             }
         }
@@ -85,7 +85,7 @@ html {
             transform: rotate(225deg);
             border-left: 300px solid transparent;
             border-right: 300px solid transparent;
-            border-bottom: 300px solid $color-and-background;
+            border-bottom: 300px solid #2D6EF3;
         }
 
     }
