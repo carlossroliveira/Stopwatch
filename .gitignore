@@ -12,3 +12,4 @@ package-lock.json
 *.scss.map
 # misc
 .DS_Store
+.parcel-cache
